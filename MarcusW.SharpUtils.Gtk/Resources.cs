@@ -7,7 +7,7 @@ namespace MarcusW.SharpUtils.Gtk
 {
     public static class Resources
     {
-        public static CssProvider LoadCss(string resourceName)
+        public static CssProvider LoadStyle(string resourceName)
         {
             if (resourceName == null)
                 throw new ArgumentNullException(nameof(resourceName));

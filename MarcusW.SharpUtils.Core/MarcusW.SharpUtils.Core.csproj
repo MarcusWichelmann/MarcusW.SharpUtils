@@ -1,7 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyTitle>C#-Utils</AssemblyTitle>
+    <Authors>Marcus Wichelmann</Authors>
+    <Version>1.0</Version>
+    <Description>Some helpful C# tools I often need</Description>
+  </PropertyGroup>
 
 </Project>
