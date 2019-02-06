@@ -4,6 +4,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.Core", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.Gtk", "MarcusW.SharpUtils.Gtk\MarcusW.SharpUtils.Gtk.csproj", "{1CC444F8-F377-49B3-B52F-082F4E938EFF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{D64605C2-7F7A-4FA4-A90B-0CFB97EEE9F4}"
+ProjectSection(SolutionItems) = preProject
+	.editorconfig = .editorconfig
+	.gitignore = .gitignore
+	LICENSE = LICENSE
+	README.md = README.md
+	.travis.yml = .travis.yml
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

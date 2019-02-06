@@ -1,0 +1,18 @@
+language: csharp
+solution: MarcusW.SharpUtils.sln
+mono: none
+dotnet: 2.0.0
+
+install:
+- dotnet restore
+
+script:
+- dotnet build -c Release
+
+deploy:
+  provider: script
+  script:
+    dotnet pack -c Release
+    find . -name '*.nupkg' -exec dotnet nuget push {} -k $NUGET_KEY -s https://nuget.org/ \;
+  on:
+    tags: true
