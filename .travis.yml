@@ -1,5 +1,6 @@
 language: csharp
 solution: MarcusW.SharpUtils.sln
+dist: xenial
 mono: none
 dotnet: 2.2.0
 
