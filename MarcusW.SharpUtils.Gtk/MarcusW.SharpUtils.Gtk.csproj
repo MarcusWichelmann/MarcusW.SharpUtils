@@ -1,7 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$(SolutionDir)ProjectProperties.targets"/>
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
 
+  <Import Project="$(SolutionDir)ProjectProperties.targets"/>
 
   <ItemGroup>
     <PackageReference Include="GtkSharp" Version="3.22.24.37"/>
