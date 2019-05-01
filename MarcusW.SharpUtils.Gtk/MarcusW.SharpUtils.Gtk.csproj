@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <Import Project="$(SolutionDir)ProjectProperties.targets"/>
+  <Import Project="../ProjectProperties.targets"/>
 
   <ItemGroup>
     <PackageReference Include="GtkSharp" Version="3.22.24.37"/>
