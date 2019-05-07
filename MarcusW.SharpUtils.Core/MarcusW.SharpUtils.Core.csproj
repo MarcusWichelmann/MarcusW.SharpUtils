@@ -4,6 +4,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <Import Project="../ProjectProperties.targets"/>
+  <Import Project="../ProjectProperties.targets" />
 
 </Project>
