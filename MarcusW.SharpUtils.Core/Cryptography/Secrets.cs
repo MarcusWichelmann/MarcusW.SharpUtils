@@ -9,6 +9,12 @@ namespace MarcusW.SharpUtils.Core.Cryptography
 {
     public static class Secrets
     {
+        /// <summary>
+        /// Generates a password string with a specified length
+        /// </summary>
+        /// <param name="length">Length of the password that will be generated</param>
+        /// <param name="generationFlags">Configuration for the password generation</param>
+        /// <returns>The generated password</returns>
         public static string GeneratePassword(int length, PasswordGenerationFlags generationFlags = PasswordGenerationFlags.Default)
         {
             if (length <= 0)

@@ -4,6 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+      <HintPath>..\..\..\.nuget\packages\system.memory\4.5.1\ref\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
   <Import Project="../ProjectProperties.targets" />
 
 </Project>
