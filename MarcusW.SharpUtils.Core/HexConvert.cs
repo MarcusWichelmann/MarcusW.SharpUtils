@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace MarcusW.SharpUtils.Core.Encoding
+namespace MarcusW.SharpUtils.Core
 {
     public static class HexConvert
     {

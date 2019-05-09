@@ -10,6 +10,24 @@ namespace MarcusW.SharpUtils.Core.Cryptography
     public static class Secrets
     {
         /// <summary>
+        /// Generates a random token with a specified length
+        /// </summary>
+        /// <param name="length">Length of the token that will be generated</param>
+        /// <returns>Bytes of the token</returns>
+        public static byte[] GenerateToken(int length)
+        {
+            if (length <= 0)
+                throw new ArgumentOutOfRangeException(nameof(length));
+
+            // Generate random bytes
+            var bytes = new byte[length];
+            using (var randomNumberGenerator = RandomNumberGenerator.Create())
+                randomNumberGenerator.GetBytes(bytes);
+
+            return bytes;
+        }
+
+        /// <summary>
         /// Generates a password string with a specified length
         /// </summary>
         /// <param name="length">Length of the password that will be generated</param>
@@ -63,6 +81,36 @@ namespace MarcusW.SharpUtils.Core.Cryptography
                     return new string(randomBytes.Select(number => GetRandomCharFromCharSet(fullCharSet, number)).ToArray());
                 }
             }
+        }
+
+        /// <summary>
+        /// Checks if two secrets are equal. As long as both secrets have the same length, this comparison will execute in constant time.
+        /// </summary>
+        /// <param name="secret1">First secret</param>
+        /// <param name="secret2">Other secret</param>
+        /// <returns>True, if both secrets were the same</returns>
+        public static bool SecureCompare(string secret1, string secret2)
+        {
+            if (secret1 == null)
+                throw new ArgumentNullException(nameof(secret1));
+            if (secret2 == null)
+                throw new ArgumentNullException(nameof(secret2));
+
+            // Of course this is not constant-time, but I think this case is uncritical.
+            if (secret1.Length != secret2.Length)
+                return false;
+
+            // Get bytes
+            byte[] bytes1 = Encoding.UTF8.GetBytes(secret1);
+            byte[] bytes2 = Encoding.UTF8.GetBytes(secret2);
+
+            // Calculate difference
+            var diff = 0;
+            for (var i = 0; i < bytes1.Length; i++)
+                diff |= bytes1[i] ^ bytes2[i];
+
+            // Return if secrets were different
+            return diff == 0;
         }
 
         private static IEnumerable<string> BuildCharacterSet(PasswordGenerationFlags generationFlags)
