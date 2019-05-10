@@ -22,6 +22,8 @@ namespace MarcusW.SharpUtils.Core
             return resultBuilder.ToString();
         }
 
+// Improved version, as soon as this library can be released with targeting .Net Standard 2.1
+#if NETSTANDARD2_1
         /// <summary>
         /// Decode hex string to bytes
         /// </summary>
@@ -38,6 +40,7 @@ namespace MarcusW.SharpUtils.Core
 
             return result;
         }
+#endif
 
         /// <summary>
         /// Decode hex string to bytes
@@ -48,7 +51,18 @@ namespace MarcusW.SharpUtils.Core
         {
             if (hex == null)
                 throw new ArgumentNullException(nameof(hex));
+#if NETSTANDARD2_1
             return FromHexString(hex.AsSpan());
+#else
+            if (hex.Length % 2 != 0)
+                throw new ArgumentException("Odd hex string length.", nameof(hex));
+
+            var result = new byte[hex.Length / 2];
+            for (int i = 0; i < result.Length; i++)
+                result[i] = Convert.ToByte(hex.Substring(i * 2, 2).ToString(), 16);
+
+            return result;
+#endif
         }
     }
 }
