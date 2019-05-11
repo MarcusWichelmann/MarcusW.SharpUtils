@@ -37,8 +37,6 @@ namespace MarcusW.SharpUtils.Core.Cryptography
         {
             if (length <= 0)
                 throw new ArgumentOutOfRangeException(nameof(length));
-            if (!Enum.IsDefined(typeof(PasswordGenerationFlags), generationFlags))
-                throw new InvalidEnumArgumentException(nameof(generationFlags), (int)generationFlags, typeof(PasswordGenerationFlags));
 
             // Build character set
             string[] charSets = BuildCharacterSet(generationFlags).ToArray();
@@ -135,10 +133,10 @@ namespace MarcusW.SharpUtils.Core.Cryptography
 
             // Select random characters from the string, add it to the new string and remove it from the collection
             var valueChars = new StringBuilder(value);
-            var stringBuilder = new StringBuilder();
+            var stringBuilder = new StringBuilder(value.Length);
             for (var i = 0; i < value.Length; i++)
             {
-                int charIndex = randomBytes[i++] % valueChars.Length;
+                int charIndex = randomBytes[i] % valueChars.Length;
                 stringBuilder.Append(valueChars[charIndex]);
                 valueChars.Remove(charIndex, 1);
             }
@@ -150,7 +148,7 @@ namespace MarcusW.SharpUtils.Core.Cryptography
         private static char GetRandomCharFromCharSet(string charSet, byte randomNumber)
         {
             // scale random number down to available range
-            int index = (int)Math.Round((double)randomNumber / 0xff * charSet.Length);
+            int index = (int)Math.Round((double)randomNumber / 0xff * (charSet.Length - 1));
             return charSet[index];
         }
     }

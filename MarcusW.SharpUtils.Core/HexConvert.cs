@@ -17,7 +17,12 @@ namespace MarcusW.SharpUtils.Core
 
             var resultBuilder = new StringBuilder(bytes.Length * 2);
             foreach (var b in bytes)
-                resultBuilder.Append(Convert.ToString(b, 16));
+            {
+                string hexComponent = Convert.ToString(b, 16);
+                if (hexComponent.Length == 1)
+                    resultBuilder.Append('0');
+                resultBuilder.Append(hexComponent);
+            }
 
             return resultBuilder.ToString();
         }
