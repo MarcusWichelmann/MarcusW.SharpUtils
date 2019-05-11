@@ -64,7 +64,7 @@ namespace MarcusW.SharpUtils.Core
 
             var result = new byte[hex.Length / 2];
             for (int i = 0; i < result.Length; i++)
-                result[i] = Convert.ToByte(hex.Substring(i * 2, 2).ToString(), 16);
+                result[i] = Convert.ToByte(hex.Substring(i * 2, 2), 16);
 
             return result;
 #endif
