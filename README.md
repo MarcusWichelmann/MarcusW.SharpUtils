@@ -11,3 +11,5 @@ Some helpful C# tools I often need
 [**MarcusW.SharpUtils.Core**](https://www.nuget.org/packages/MarcusW.SharpUtils.Core/)
 
 [**MarcusW.SharpUtils.Gtk**](https://www.nuget.org/packages/MarcusW.SharpUtils.Gtk/)
+
+[**MarcusW.SharpUtils.Redis**](https://www.nuget.org/packages/MarcusW.SharpUtils.Redis/)

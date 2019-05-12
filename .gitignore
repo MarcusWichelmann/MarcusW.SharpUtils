@@ -269,3 +269,7 @@ appsettings.Development.json
 
 # Logs
 logs/
+
+# Test Keys
+!test-cert.pfx
+!test-key.pfx

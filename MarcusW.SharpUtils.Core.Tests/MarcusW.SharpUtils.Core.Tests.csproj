@@ -16,4 +16,8 @@
       <ProjectReference Include="..\MarcusW.SharpUtils.Core\MarcusW.SharpUtils.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Files" />
+    </ItemGroup>
+
 </Project>
