@@ -20,4 +20,13 @@
       <Folder Include="Files" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Files\test-cert.pfx">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Files\test-key.pfx">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>
