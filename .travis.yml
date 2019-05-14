@@ -12,6 +12,7 @@ script:
   - dotnet build -c Release
 
 deploy:
+  skip_cleanup: true
   provider: script
   script: dotnet pack MarcusW.SharpUtils.Core/MarcusW.SharpUtils.Core.csproj -c Release && \
     dotnet pack MarcusW.SharpUtils.Gtk/MarcusW.SharpUtils.Gtk.csproj -c Release && \
