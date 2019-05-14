@@ -1,6 +1,6 @@
 language: csharp
 solution: MarcusW.SharpUtils.sln
-dist: xenial
+dist: bionic
 mono: none
 dotnet: 2.2
 
