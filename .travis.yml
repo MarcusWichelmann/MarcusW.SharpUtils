@@ -2,7 +2,7 @@ language: csharp
 solution: MarcusW.SharpUtils.sln
 dist: xenial
 mono: none
-dotnet: 2.1.502
+dotnet: 2.2.105
 
 install:
   - dotnet restore
