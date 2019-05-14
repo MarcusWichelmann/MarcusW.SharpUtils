@@ -1,8 +1,8 @@
 language: csharp
 solution: MarcusW.SharpUtils.sln
-dist: bionic
+dist: xenial
 mono: none
-dotnet: 2.2.105
+dotnet: 2.1.502
 
 install:
   - dotnet restore
