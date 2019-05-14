@@ -1,4 +1,4 @@
-version: 2
+version: 2.1
 jobs:
   test:
     docker:
@@ -19,6 +19,7 @@ jobs:
       - run: dotnet pack MarcusW.SharpUtils.Redis/MarcusW.SharpUtils.Redis.csproj -c Release
       - deploy: find . -name '*.nupkg' -exec dotnet nuget push {} -k $NUGET_KEY -s https://nuget.org \;
 workflows:
+  version: 2
   test_and_deploy:
     jobs:
       - test:
