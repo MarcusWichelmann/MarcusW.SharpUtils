@@ -14,9 +14,10 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: dotnet pack MarcusW.SharpUtils.Core/MarcusW.SharpUtils.Core.csproj -c Release && \
-    dotnet pack MarcusW.SharpUtils.Gtk/MarcusW.SharpUtils.Gtk.csproj -c Release && \
-    dotnet pack MarcusW.SharpUtils.Redis/MarcusW.SharpUtils.Redis.csproj -c Release && \
+  script: >
+    dotnet pack MarcusW.SharpUtils.Core/MarcusW.SharpUtils.Core.csproj -c Release &&
+    dotnet pack MarcusW.SharpUtils.Gtk/MarcusW.SharpUtils.Gtk.csproj -c Release &&
+    dotnet pack MarcusW.SharpUtils.Redis/MarcusW.SharpUtils.Redis.csproj -c Release &&
     find . -name '*.nupkg' -exec dotnet nuget push {} -k $NUGET_KEY -s https://nuget.org \;
   on:
     tags: true
