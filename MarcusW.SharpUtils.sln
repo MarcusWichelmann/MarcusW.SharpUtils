@@ -10,8 +10,8 @@ ProjectSection(SolutionItems) = preProject
 	.gitignore = .gitignore
 	LICENSE = LICENSE
 	README.md = README.md
-	.travis.yml = .travis.yml
 	ProjectProperties.targets = ProjectProperties.targets
+	.circleci\config.yml = .circleci\config.yml
 EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.Redis", "MarcusW.SharpUtils.Redis\MarcusW.SharpUtils.Redis.csproj", "{31BC49C2-C1C7-4D55-BB61-FD3E11DC8E12}"
