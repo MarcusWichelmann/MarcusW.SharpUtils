@@ -19,11 +19,11 @@ namespace MarcusW.SharpUtils.Core.Cryptography
         /// </summary>
         public string HexKey => Key.ToHexString();
 
-        private readonly AesManaged _aesAlgorithm;
+        private readonly Aes _aesAlgorithm;
 
         private bool _disposed;
 
-        internal AES(AesManaged aesAlgorithm)
+        internal AES(Aes aesAlgorithm)
         {
             _aesAlgorithm = aesAlgorithm ?? throw new ArgumentNullException(nameof(aesAlgorithm));
             Key = _aesAlgorithm.Key;
@@ -143,7 +143,7 @@ namespace MarcusW.SharpUtils.Core.Cryptography
         public static AES GenerateKey()
         {
             // Key is generated on initialization
-            var aesAlgorithm = new AesManaged();
+            var aesAlgorithm = Aes.Create();
             return new AES(aesAlgorithm);
         }
 
@@ -155,9 +155,11 @@ namespace MarcusW.SharpUtils.Core.Cryptography
             if (key == null)
                 throw new ArgumentNullException(nameof(key));
 
-            var aesAlgorithm = new AesManaged {
-                Key = key
-            };
+            var aesAlgorithm = Aes.Create();
+            if (aesAlgorithm == null)
+                throw new PlatformNotSupportedException("Could not initialize AES implementation");
+            aesAlgorithm.Key = key;
+
             return new AES(aesAlgorithm);
         }
 

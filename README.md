@@ -1,6 +1,6 @@
 # MarcusW.SharpUtils
 
-Some helpful C# tools I often need
+This library contains some helpful C# tools I need often.
 
 [![](https://travis-ci.org/MarcusWichelmann/MarcusW.SharpUtils.svg?branch=master)](https://travis-ci.org/MarcusWichelmann/MarcusW.SharpUtils)
 ![](https://img.shields.io/github/release/MarcusWichelmann/MarcusW.SharpUtils.svg)
