@@ -2,7 +2,7 @@
 
 This library contains some helpful C# tools I need often.
 
-[![](https://travis-ci.org/MarcusWichelmann/MarcusW.SharpUtils.svg?branch=master)](https://travis-ci.org/MarcusWichelmann/MarcusW.SharpUtils)
+![CircleCI (all branches)](https://img.shields.io/circleci/project/github/MarcusWichelmann/MarcusW.SharpUtils.svg)
 ![](https://img.shields.io/github/release/MarcusWichelmann/MarcusW.SharpUtils.svg)
 ![](https://img.shields.io/nuget/v/MarcusW.SharpUtils.Core.svg?style=flat)
 
