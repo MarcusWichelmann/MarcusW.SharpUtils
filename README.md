@@ -10,6 +10,8 @@ This library contains some helpful C# tools I need often.
 
 [**MarcusW.SharpUtils.Core**](https://www.nuget.org/packages/MarcusW.SharpUtils.Core/)
 
+[**MarcusW.SharpUtils.AspNetCore**](https://www.nuget.org/packages/MarcusW.SharpUtils.AspNetCore/)
+
 [**MarcusW.SharpUtils.Gtk**](https://www.nuget.org/packages/MarcusW.SharpUtils.Gtk/)
 
 [**MarcusW.SharpUtils.Redis**](https://www.nuget.org/packages/MarcusW.SharpUtils.Redis/)

@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.Redis", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.Core.Tests", "MarcusW.SharpUtils.Core.Tests\MarcusW.SharpUtils.Core.Tests.csproj", "{DD9219D3-FD16-4FD5-B8F4-A35B6B227480}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.AspNetCore", "MarcusW.SharpUtils.AspNetCore\MarcusW.SharpUtils.AspNetCore.csproj", "{79DA2AB8-4B4C-4861-9840-731A416940D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.AspNetCore.Tests", "MarcusW.SharpUtils.AspNetCore.Tests\MarcusW.SharpUtils.AspNetCore.Tests.csproj", "{8BD46436-F058-4DF0-9323-7A9D12072D12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,5 +44,13 @@ Global
 		{DD9219D3-FD16-4FD5-B8F4-A35B6B227480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD9219D3-FD16-4FD5-B8F4-A35B6B227480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD9219D3-FD16-4FD5-B8F4-A35B6B227480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79DA2AB8-4B4C-4861-9840-731A416940D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79DA2AB8-4B4C-4861-9840-731A416940D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79DA2AB8-4B4C-4861-9840-731A416940D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79DA2AB8-4B4C-4861-9840-731A416940D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BD46436-F058-4DF0-9323-7A9D12072D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BD46436-F058-4DF0-9323-7A9D12072D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BD46436-F058-4DF0-9323-7A9D12072D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BD46436-F058-4DF0-9323-7A9D12072D12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

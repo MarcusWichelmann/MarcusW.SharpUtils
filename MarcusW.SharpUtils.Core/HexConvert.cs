@@ -24,6 +24,7 @@ namespace MarcusW.SharpUtils.Core
                 resultBuilder.Append(hexComponent);
             }
 
+
             return resultBuilder.ToString();
         }
 
