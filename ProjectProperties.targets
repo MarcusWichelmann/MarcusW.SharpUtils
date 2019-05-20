@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyTitle>C#-Utils</AssemblyTitle>
     <Authors>Marcus Wichelmann</Authors>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Description>Some helpful C# tools I often need</Description>
     <PackageProjectUrl>https://github.com/MarcusWichelmann/MarcusW.SharpUtils</PackageProjectUrl>
   </PropertyGroup>
