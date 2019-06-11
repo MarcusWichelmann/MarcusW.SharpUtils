@@ -10,7 +10,7 @@ namespace MarcusW.SharpUtils.Core.Cryptography
     /// </summary>
     public static class AsymmetricEncryption
     {
-        public static (byte[] encryptedKey, byte[] encryptedData) Encrypt(X509Certificate2 publicCertificate, byte[] data, int aesKeySize = 4096)
+        public static (byte[] encryptedKey, byte[] encryptedData) Encrypt(X509Certificate2 publicCertificate, byte[] data, int aesKeySize = 128)
         {
             RSA publicKey = RSAKeyLoader.LoadFromCertificate(publicCertificate);
             if (!publicKey.GetHasPublicKey())
@@ -19,7 +19,7 @@ namespace MarcusW.SharpUtils.Core.Cryptography
             return Encrypt(publicKey, data, aesKeySize);
         }
 
-        public static (byte[] encryptedKey, byte[] encryptedData) Encrypt(RSA publicKey, byte[] data, int aesKeySize = 4096)
+        public static (byte[] encryptedKey, byte[] encryptedData) Encrypt(RSA publicKey, byte[] data, int aesKeySize = 128)
         {
             // Symmetrically encrypt data
             using (AES aes = AES.GenerateKey(aesKeySize))
