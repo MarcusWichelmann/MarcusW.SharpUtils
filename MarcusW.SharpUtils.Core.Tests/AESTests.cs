@@ -12,7 +12,7 @@ namespace MarcusW.SharpUtils.Core.Tests
         [InlineData(new[] { (byte)73, (byte)82, (byte)98, (byte)185, (byte)7, (byte)11, (byte)255 })]
         public void EncryptsAndDecryptsBytesCorrectlyUsingSameInstances(byte[] data)
         {
-            AES aes = AES.GenerateKey();
+            AES aes = AES.GenerateKey(4096);
             byte[] encrypted = aes.Encrypt(data);
             byte[] decrypted = aes.Decrypt(encrypted);
 
@@ -26,7 +26,7 @@ namespace MarcusW.SharpUtils.Core.Tests
         [InlineData(new[] { (byte)73, (byte)82, (byte)98, (byte)185, (byte)7, (byte)11, (byte)255 })]
         public void EncryptsAndDecryptsBytesCorrectlyUsingDifferentInstances(byte[] data)
         {
-            AES aes = AES.GenerateKey();
+            AES aes = AES.GenerateKey(4096);
             string key = aes.HexKey;
             byte[] encrypted = aes.Encrypt(data);
 
@@ -42,7 +42,7 @@ namespace MarcusW.SharpUtils.Core.Tests
         [InlineData("This is a test")]
         public void EncryptsAndDecryptsStringCorrectly(string data)
         {
-            AES aes = AES.GenerateKey();
+            AES aes = AES.GenerateKey(4096);
             byte[] encrypted = aes.EncryptString(data);
             string decrypted = aes.DecryptString(encrypted);
 

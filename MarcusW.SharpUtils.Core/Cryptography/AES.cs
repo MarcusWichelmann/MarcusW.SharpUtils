@@ -140,10 +140,14 @@ namespace MarcusW.SharpUtils.Core.Cryptography
         /// <summary>
         /// Returns an <see cref="AES"/> instance from a newly generated key
         /// </summary>
-        public static AES GenerateKey()
+        public static AES GenerateKey(int keySize)
         {
-            // Key is generated on initialization
             var aesAlgorithm = Aes.Create();
+            if (aesAlgorithm == null)
+                throw new PlatformNotSupportedException("Could not initialize AES implementation");
+            aesAlgorithm.KeySize = keySize;
+            aesAlgorithm.GenerateKey();
+
             return new AES(aesAlgorithm);
         }
 
