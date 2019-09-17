@@ -13,6 +13,7 @@ jobs:
       - checkout
       - run: dotnet pack MarcusW.SharpUtils.Core/MarcusW.SharpUtils.Core.csproj -c Release
       - run: dotnet pack MarcusW.SharpUtils.Validation/MarcusW.SharpUtils.Validation.csproj -c Release
+      - run: dotnet pack MarcusW.SharpUtils.DependencyInjection/MarcusW.SharpUtils.DependencyInjection.csproj -c Release
       - run: dotnet pack MarcusW.SharpUtils.AspNetCore/MarcusW.SharpUtils.AspNetCore.csproj -c Release
       - run: dotnet pack MarcusW.SharpUtils.Gtk/MarcusW.SharpUtils.Gtk.csproj -c Release
       - run: dotnet pack MarcusW.SharpUtils.Redis/MarcusW.SharpUtils.Redis.csproj -c Release

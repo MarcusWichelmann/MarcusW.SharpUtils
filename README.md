@@ -12,6 +12,8 @@ This library contains some helpful C# tools I need often.
 
 [**MarcusW.SharpUtils.Validation**](https://www.nuget.org/packages/MarcusW.SharpUtils.Validation/)
 
+[**MarcusW.SharpUtils.DependencyInjection**](https://www.nuget.org/packages/MarcusW.SharpUtils.DependencyInjection/)
+
 [**MarcusW.SharpUtils.AspNetCore**](https://www.nuget.org/packages/MarcusW.SharpUtils.AspNetCore/)
 
 [**MarcusW.SharpUtils.Gtk**](https://www.nuget.org/packages/MarcusW.SharpUtils.Gtk/)
