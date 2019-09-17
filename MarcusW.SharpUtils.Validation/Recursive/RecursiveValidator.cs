@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
 
-namespace MarcusW.SharpUtils.AspNetCore.Validation
+namespace MarcusW.SharpUtils.Validation.Recursive
 {
     // Based on https://stackoverflow.com/questions/7663501/dataannotations-recursively-validating-an-entire-object-graph/8090614#8090614
     public static class RecursiveValidator

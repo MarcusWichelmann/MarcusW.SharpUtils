@@ -22,6 +22,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.AspNetCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.AspNetCore.Tests", "MarcusW.SharpUtils.AspNetCore.Tests\MarcusW.SharpUtils.AspNetCore.Tests.csproj", "{8BD46436-F058-4DF0-9323-7A9D12072D12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.Validation", "MarcusW.SharpUtils.Validation\MarcusW.SharpUtils.Validation.csproj", "{8AD2B2DF-6FEC-49A5-8309-8EFD5DDD7E30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarcusW.SharpUtils.Validation.Tests", "MarcusW.SharpUtils.Validation.Tests\MarcusW.SharpUtils.Validation.Tests.csproj", "{1309E00B-482E-45E7-8B5D-EE6F23582612}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,5 +56,13 @@ Global
 		{8BD46436-F058-4DF0-9323-7A9D12072D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BD46436-F058-4DF0-9323-7A9D12072D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BD46436-F058-4DF0-9323-7A9D12072D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD2B2DF-6FEC-49A5-8309-8EFD5DDD7E30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD2B2DF-6FEC-49A5-8309-8EFD5DDD7E30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD2B2DF-6FEC-49A5-8309-8EFD5DDD7E30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD2B2DF-6FEC-49A5-8309-8EFD5DDD7E30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1309E00B-482E-45E7-8B5D-EE6F23582612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1309E00B-482E-45E7-8B5D-EE6F23582612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1309E00B-482E-45E7-8B5D-EE6F23582612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1309E00B-482E-45E7-8B5D-EE6F23582612}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

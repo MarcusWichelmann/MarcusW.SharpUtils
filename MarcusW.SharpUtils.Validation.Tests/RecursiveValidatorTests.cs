@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using MarcusW.SharpUtils.AspNetCore.Validation;
+using MarcusW.SharpUtils.Validation.Recursive;
 using Xunit;
 
-namespace MarcusW.SharpUtils.AspNetCore.Tests
+namespace MarcusW.SharpUtils.Validation.Tests
 {
     public class RecursiveValidatorTests
     {
